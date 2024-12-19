@@ -1,0 +1,16 @@
+camera_color_topc: 
+camera_depth_topic:
+openai_key:
+gdino_pro_key:
+probable_objects:
+camera_frame_name:
+base_frame_name:
+box_threshold_object_prompt:
+text_threshold_object_prompt:
+box_threshold_object_list_prompt:
+text_threshold_object_list_prompt:
+edge_object_detection:
+edge_threshold:
+VLM_labelled_detector:
+camera_intrinsic:
+default_gpt_detected_score:

@@ -1,0 +1,33 @@
+"vqa_prompt_object_detection_closed_set": '"""Image 2 contains bounding boxes with labels {bl}. First identify and name all the 
+objects in the image using the first image. The objects in the image can be from the probable_object_list. 
+Even if a object is not in the probable object list, name that too. Then, you have to identify the 
+object in each box in the second image using the objects detected by you in the first image. Object in each box can be from the probable_object_list.\n
+probable_object_list: {pol}. \n
+With each detection, also output the reason behind each detection. Carefully evaluate you answer, 
+and verify that its correct. Sometimes there might be multiple objects in a box. 
+In such cases, identify the bigger object that the box is encompassing. """.format(bl=box_labels, pol=probable_object_list)'
+
+"vqa_prompt_object_detection_closed_set_parser": '"""object_detection_paragraph: {odp}.
+From the object_detection_paragraph, output which box contains what object. A probable object list is also being provided.
+In case there is a object name in object_detection_paragraph, which is similar to the one in 
+probable object list, change the name to the probable object list one.
+probable object list: {pol} \n
+Output Template: {t} \n
+Output in the same json format that has been described above. Only output the 
+dictionary, noting else. Do not add ```json``` to the outout.""".format(odp=object_detection_paragraph, t=template, pol=probable_object_list)'
+
+"vqa_prompt_object_relation": '"""Objects in the images are {pol}. Find the
+relations (inside, onTop, at) if it exists,  between the objects mentioned using the images.
+Not all the objects will be present in each image. The objects can be either on the 
+table (light brown color) or on the rack. For each objects, also tell if the 
+objects is at the table or at the rack. Do not generate onTop and 
+inside relations of objects with table and rack. Do not generate relations like left, 
+right, above, below, far, near between objects.""".format(pol=probable_object_list)'
+
+"object_relation_parser_prompt": '"""Object_relation_paragraph: {orp}. From the 
+object_relation_paragraph, extract out the relation between the objects. Also extract 
+out where each object lies on in the worksapce (table or rack). Output in the 
+following format: \n
+{t}
+Only output the dictionary, nothing else. Output in json format. Do not generate 
+onTop and inside relations of objects with table and rack.""".format(orp=object_relation_paragraph, t=template)'

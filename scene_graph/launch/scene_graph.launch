@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="scene_graph" type="scene_graph_generate.py" name="scene_graph_generator_node" output="screen" respawn="false" />
+</launch>
