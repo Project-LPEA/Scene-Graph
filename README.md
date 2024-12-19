@@ -10,7 +10,7 @@
    b. camera_depth_topic\
    c. camera_frame_name\
    d. base_frame_name\
-   e. camera_intrinsic\
+   e. camera_intrinsic
 2. The following params are api keys which need to be put accordingly:\
    a. openai_key\
-   b. gdino_pro_key\
+   b. gdino_pro_key
