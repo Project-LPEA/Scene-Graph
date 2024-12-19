@@ -1,16 +1,16 @@
-camera_color_topc: 
-camera_depth_topic:
-openai_key:
-gdino_pro_key:
-probable_objects:
+camera_color_topc:                            # Color image topic name
+camera_depth_topic:                           # Depth image topic name
+openai_key:                                   # OpenAI key
+gdino_pro_key:                                # Gdino pro key
+probable_objects: []                            # List of probable objects
 camera_frame_name:
 base_frame_name:
-box_threshold_object_prompt:
-text_threshold_object_prompt:
-box_threshold_object_list_prompt:
-text_threshold_object_list_prompt:
-edge_object_detection:
-edge_threshold:
-VLM_labelled_detector:
-camera_intrinsic:
-default_gpt_detected_score:
+box_threshold_object_prompt: 0.2
+text_threshold_object_prompt: 0.2
+box_threshold_object_list_prompt: 0.7
+text_threshold_object_list_prompt: 0.7
+edge_object_detection: False                       # bool: True/False
+edge_threshold: 20                              # pixel padding
+VLM_labelled_detector:                        # gdino_pro/gdino
+camera_intrinsic:                             # [cx, cy, fx, fy]
+default_gpt_detected_score: 0.8
